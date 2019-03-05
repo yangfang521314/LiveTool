@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/root"
+                android:background="#ff000000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.opengl.GLSurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <Chronometer
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:format="%s"
+            android:gravity="center"
+            android:textColor="#368ca8"
+            android:textSize="12sp"
+            android:layout_height="46dp"/>
+
+    <include
+            android:id="@+id/actionbar"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            layout="@layout/base_camera_actionbar"/>
+
+
+    <TextView
+            android:id="@+id/debug_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/actionbar"
+            android:layout_marginTop="10dp"
+            android:textColor="#dedede"
+            android:textSize="12sp"/>
+
+    <ImageView
+            android:id="@+id/start_stream_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:src="@android:drawable/ic_media_play"
+            android:padding="5dp">
+    </ImageView>
+
+</RelativeLayout>
