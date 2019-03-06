@@ -44,6 +44,7 @@
         </activity>
         <activity android:name=".ui.activity.SettingActivity"/>
         <activity android:name=".ui.activity.BaseCameraActivity"/>
+        <activity android:name=".StubActivity"/>
     </application>
 
 </manifest>

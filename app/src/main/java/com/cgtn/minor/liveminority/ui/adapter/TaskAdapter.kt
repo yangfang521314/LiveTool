@@ -99,7 +99,7 @@ class TaskAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ItemViewHolder {
-        var holder: RecyclerView.ViewHolder? = null
+        val holder: RecyclerView.ViewHolder?
         holder = when (p1) {
             FOOT -> {
                 ItemViewHolder(View.inflate(parent.context, R.layout.item_new_task, null))
