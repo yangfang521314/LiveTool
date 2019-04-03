@@ -1,47 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activity.MainActivity">
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context="com.young.minor.livetool.ui.activity.MainActivity">
 
-    <ImageView
-        android:id="@+id/set_iv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:padding="5dp"
-        android:src="@mipmap/set" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/live"
-        android:layout_below="@+id/set_iv"
-        android:orientation="vertical">
+    <RelativeLayout
+            android:background="@color/dodgerblue"
+            android:id="@+id/ll_set_iv"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
         <TextView
-            android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:text="直播url地址设置"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <ImageView
+                android:id="@+id/set_iv"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:src="@mipmap/set"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="任务列表" />
+            android:layout_above="@+id/live"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/ll_set_iv"
+            android:orientation="vertical">
+
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recy_url"
-            android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp" />
+                android:id="@+id/recy_url"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
     </LinearLayout>
 
     <Button
-        android:id="@+id/live"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:text="开始直播" />
+            android:id="@+id/live"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/login_btn"
+            android:textSize="16sp"
+            android:text="开始直播"/>
 
 </RelativeLayout>

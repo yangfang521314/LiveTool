@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">LiveMinority</string>
+    <string name="app_name">牛牛推流</string>
     <string name="permissions_1">No Camera or AudioRecord permission, Permissions required for live streaming"</string>
 </resources>

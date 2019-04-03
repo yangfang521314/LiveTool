@@ -5,10 +5,9 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:background="@color/lightskyblue"
-                tools:context=".ui.activity.LoginActivity">
+                tools:context="com.young.minor.livetool.ui.activity.LoginActivity">
 
     <TextView
-            android:text="CGTN账户登录"
             android:layout_above="@+id/login_username"
             android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
