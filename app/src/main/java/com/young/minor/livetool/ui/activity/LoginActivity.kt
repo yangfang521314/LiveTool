@@ -1,7 +1,6 @@
 package com.young.minor.livetool.ui.activity
 
 import android.content.Intent
-import android.graphics.DashPathEffect
 import android.text.TextUtils
 import android.view.KeyEvent
 import com.young.minor.livetool.R
@@ -17,7 +16,6 @@ class LoginActivity : BaseMVPActivity<LoginContract.LoginView, LoginPresenter>()
     private var isLogin by SharedPreferenceUtil("login", false)
 
     private var mExitTime = 0L
-    private var circleAngle: Int = 0
 
 
     override fun loginSuccess() {
@@ -30,12 +28,8 @@ class LoginActivity : BaseMVPActivity<LoginContract.LoginView, LoginPresenter>()
         mPresenter = LoginPresenter()
         mPresenter!!.attach(this)
         //添加进入数据库
-
     }
-
-
-    private lateinit var effect: DashPathEffect
-
+    
     override fun initView() {
         mUserName = login_username.text.toString()
         mPwd = login_pwd.text.toString()
