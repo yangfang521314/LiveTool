@@ -24,8 +24,10 @@
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
+
         <TextView
                 android:text="保存"
+                android:id="@+id/save"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="10dp"
@@ -46,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="6dp"
-            android:text="分辨率"
+            android:text="预览分辨率"
             android:textSize="16sp"/>
 
     <RadioGroup
@@ -80,12 +82,63 @@
                 android:text="高（1080P）"/>
     </RadioGroup>
 
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede"/>
+
+    <TextView
+            android:id="@+id/recordTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="6dp"
+            android:text="推流分辨率"
+            android:textSize="16sp"/>
+
+    <RadioGroup
+            android:id="@+id/preview_record_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+        <RadioButton
+                android:id="@+id/record_480"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="低（480P）"/>
+
+        <RadioButton
+                android:id="@+id/record_720"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="中（720P）"/>
+
+        <RadioButton
+                android:id="@+id/record_1080"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="高（1080P）"/>
+    </RadioGroup>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="码率"
+            android:layout_marginTop="5dp"
+
             android:textSize="16sp"/>
 
     <RadioGroup
@@ -119,10 +172,17 @@
                 android:text="1500kbps"/>
     </RadioGroup>
 
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+
             android:text="帧率"
             android:textSize="16sp"/>
 
@@ -156,5 +216,54 @@
                 android:checked="false"
                 android:text="30"/>
     </RadioGroup>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="音频编码"
+            android:textSize="16sp"/>
+
+    <RadioGroup
+            android:id="@+id/frameRate_audio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+        <RadioButton
+                android:id="@+id/audio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="AAC LC"/>
+
+        <RadioButton
+                android:id="@+id/aidop2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="AAC HE"/>
+
+        <RadioButton
+                android:id="@+id/audio3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="AAC HEV2"/>
+    </RadioGroup>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede"/>
 
 </LinearLayout>
